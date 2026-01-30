@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Snake</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <div class="container game-container">
+                <h2>Snake Game</h2>
+                <canvas id="game" width="400" height="400"></canvas>
+                <div class="game-ui">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <button id="startBtn" class="btn">Start / Restart</button>
+                </div>
+                <div class="leaderboard">
+                    <h3>Leaderboard</h3>
+                    <form id="nameForm" class="name-form" style="display:none;">
+                        <input type="text" id="playerName" placeholder="Your name" maxlength="20" required />
+                        <button type="submit" class="btn">Save Score</button>
+                    </form>
+                    <ol id="scoresList"></ol>
+                    <button id="clearScores" class="btn-small">Clear Leaderboard</button>
+                </div>
+                <p class="hint">Use arrow keys or WASD to move</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="snake.js"></script>
+    <script>
+        // prevent page scrolling on arrow keys while playing
+        window.addEventListener('keydown', function(e) {
+            const keys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '];
+            if (keys.includes(e.key)) e.preventDefault();
+        }, { passive: false });
+    </script>
+</body>
+</html>

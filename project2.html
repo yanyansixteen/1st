@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Project</div>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Calculator</h2>
+                <div class="calculator">
+                    <div class="calc-display" id="calcDisplay">0</div>
+                    <div class="calc-keys">
+                        <button data-action="clear">C</button>
+                        <button data-action="operator" data-operator="/">÷</button>
+                        <button data-action="operator" data-operator="*">×</button>
+                        <button data-action="operator" data-operator="-">−</button>
+                        <button data-action="digit">7</button>
+                        <button data-action="digit">8</button>
+                        <button data-action="digit">9</button>
+                        <button data-action="operator" data-operator="+">+</button>
+                        <button data-action="digit">4</button>
+                        <button data-action="digit">5</button>
+                        <button data-action="digit">6</button>
+                        <button data-action="equals">=</button>
+                        <button data-action="digit">1</button>
+                        <button data-action="digit">2</button>
+                        <button data-action="digit">3</button>
+                        <button data-action="decimal">.</button>
+                        <button class="zero" data-action="digit">0</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="calculator.js"></script>
+</body>
+</html>
